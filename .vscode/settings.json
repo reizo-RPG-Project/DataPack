@@ -1,0 +1,317 @@
+{
+    "mcdutil.createFile.fileTemplate": {
+        "function": [
+            "#> %fileResourcePath%",
+            "#",
+            "# %cursor%",
+            "#",
+            "# @within %nowOpenFileType% %nowOpenFileResourcePath%"
+        ]
+    },
+    "mcdutil.createDatapackTemplate.customTemplate": [
+        {
+            "label": "Mob / 登録処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/mob/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> rpg:asset/mob/%namespace%/register",
+                        "#",
+                        "# Mobの登録処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/mob/.manager/register/run.m",
+                        "",
+                        "#> データ登録",
+                        "    # 継承(オプション)",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.Extends append value {ID:\"\",namespace:\"\"}",
+                        "    # 継承されないかどうか。 boolean型",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.Final set value 1b",
+                        "    # 継承されることを前提とした、抽象的なMobかどうか。",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.IsAbstract set value 0b",
+                        "    # 名前 String型",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.Name set value \"\"",
+                        "    # 体力はどれぐらい？ Float型",
+                        "    # data modify storage reizo_mcfunc_engin:mob Register.Health set value 1.0f",
+                        "    # 持っているアイテム String型",
+                        "        # head",
+                        "        # data modify storage reizo_mcfunc_engin:mob Register.Head set value {id:}",
+                        "        # chest",
+                        "        # data modify storage reizo_mcfunc_engin:mob Register.Chest set value {id:}",
+                        "        # legs",
+                        "        # data modify storage reizo_mcfunc_engin:mob Register.Legs set value {id:}",
+                        "        # feet",
+                        "        # data modify storage reizo_mcfunc_engin:mob Register.Feet set value {id:}",
+                        "        # main_hand",
+                        "        # data modify storage reizo_mcfunc_engin:mob Register.main_hand set value {id:}",
+                        "        # off_hand",
+                        "        # data modify storage reizo_mcfunc_engin:mob Register.off_hand set value {id:}",
+                        "    # 大きさはどれくらい？ Max = 16.0d double型",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.Scale set value 1.1d",
+                        "    # アイテムを落とさないか？ boolean型",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.DethItem_Empty set value 1b",
+                        "    # 燃えるかどうか。 boolean型",
+                        "    data modify storage reizo_mcfunc_engin:mob Register.Flammable set value 0b",
+                        "    # 重力がどれくらい影響するか。高ければ高いほど重力の影響を受ける。値を-にすると浮き始める。 double型",
+                        "    # data modify storage reizo_mcfunc_engin:mob Register.Gravity set value 0.08d"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob / 召喚処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/mob/%namespace%/summon/_.mcfunction",
+                    "content": [
+                        "#> rpg/asset/mob/%namespace%/summon/_",
+                        "#",
+                        "# Mobの召喚処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/mob/.manager/summon/run.m",
+                        "",
+                        "# 元となるEntityの召喚",
+                        "summon %entity% ~ ~ ~ {Tags:[\"reizo_mcfunc_Engin.Mob\",\"reizo_mcfunc_Engin.Mob.Init\"]}"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "entity",
+                    "question": "元となるentity",
+                    "pattern": "area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
+                    "patternErrorMessage": "Entityの名前のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Mob / Tick処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/mob/%namespace%/tick/_.mcfunction",
+                    "content": [
+                        "#> rpg/asset/mob/%namespace%/tick/_",
+                        "#",
+                        "# Mobの常時Tick処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/mob/.manager/tick/run.m",
+                        "",
+                        "# Tick処理"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob / Init処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/mob/%namespace%/init/_.mcfunction",
+                    "content":[
+                        "#> rpg/asset/mob/%namespace%/init",
+                        "#",
+                        "# MobのInit処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/mob/.manager/init/run.m",
+                        "",
+                        "# Init処理"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object / 登録処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/object/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> rpg:asset/object/%namespace%/register",
+                        "#",
+                        "# ",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/object/.manager/register/run.m",
+                        "",
+                        "#> データ登録",
+                        "    # 継承(オプション) String型",
+                        "    # data modify storage reizo_mcfunc_engin:object Register.Extends append value {ID:\"\",namespace:\"\"}",
+                        "    # 継承されないかどうか。 boolean型",
+                        "    data modify storage reizo_mcfunc_engin:object Register.Final set value 1b",
+                        "    # 継承されることを前提とした、抽象的なObjectであるか。",
+                        "    data modify storage reizo_mcfunc_engin:object Register.IsAbstract set value 0b",
+                        "    # 動くことを許すか？ boolean型",
+                        "    data modify storage reizo_mcfunc_engin:object Register.Allow_Movement set value 1b"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object / 召喚処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/object/%namespace%/summon/_.mcfunction",
+                    "content": [
+                        "#> rpg/asset/object/%namespace%/summon/_",
+                        "#",
+                        "# Objectの召喚処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/object/.manager/summon/run.m",
+                        "",
+                        "# 元となるEntityの召喚",
+                        "summon %entity% ~ ~ ~ {Tags:[\"reizo_mcfunc_Engin.Object\",\"reizo_mcfunc_Engin.Object.Init\"]}"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "entity",
+                    "question": "元となるentity",
+                    "pattern": "area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
+                    "patternErrorMessage": "Entityの名前のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object / Tick処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/object/%namespace%/tick/_.mcfunction",
+                    "content": [
+                        "#> rpg/asset/object/%namespace%/tick/_",
+                        "#",
+                        "# Objectの常時Tick処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/object/.manager/tick/run.m",
+                        "",
+                        "# Tick処理"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object / Init処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/object/%namespace%/init/_.mcfunction",
+                    "content":[
+                        "#> rpg/asset/object/%namespace%/init/_",
+                        "#",
+                        "# ",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/object/.manager/init/run.m",
+                        "",
+                        "# Init処理"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Item / 登録処理",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/item/%namespace%/register.mcfunction",
+                    "content":[
+                        "#> rpg:asset/item/%namespace%/register",
+                        "#",
+                        "# ",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/item/.manager/register/run.m",
+                        "",
+                        "#> 登録処理",
+                        "    # 継承(オプション)",
+                        "    data modify storage reizo_mcfunc_engin:item Register.Extends append value {ID:\"\",namespace:\"\"}",
+                        "    # 継承されないかどうか。 boolean型",
+                        "    data modify storage reizo_mcfunc_engin:item Register.Final set value 1b",
+                        "    # 継承されることを前提とした、抽象的なMobかどうか。",
+                        "    data modify storage reizo_mcfunc_engin:item Register.IsAbstract set value 0b",
+                        "    # 名前 (TextComponentsString)",
+                        "    data modify storage reizo_mcfunc_engin:item Register.Name set value {\"text\":\"\"}",
+                        "    # 説明文 (TextComponentsString[])",
+                        "    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{\"text\":\"\"}]",
+                        "    # 消費アイテム",
+                        "    # ({animation: (block | bow | brush | crossbow | drink | eat | none | spear | spyglass | toot_horn),consume_seconds:(float型),has_consume_particles:(boolean型),on_consume_effects:(TextComponentsString[])})",
+                        "    # data modify storage reizo_mcfunc_engin:item Register.Consumable set value {\"animation\":\"none\",\"consume_seconds\":2147483647}",
+                        "    # 動作スロット (0b..26b, mainhand, offhand, head, chest, legs, feet)",
+                        "    data modify storage reizo_mcfunc_engin:item Register.Slot set value []"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Item / 取得処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/item/%namespace%/give/_.mcfunction",
+                    "content":[
+                        "#> rpg:asset/item/%namespace%/give/_",
+                        "#",
+                        "# Itemの取得処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/item/.manager/run.m",
+                        "",
+                        "# 元となるアイテムを召喚",
+                        "summon item ~ ~ ~ {Item:{id:\"%item%\"},Tags:[\"reizo_mcfunc_Engin.Item.Init\",\"reizo_mcfunc_Engin.Item\"]}"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "item",
+                    "question": "元となるアイテム"
+                }
+            ]
+        },
+        {
+            "label": "Item / Tick処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/item/%namespace%/tick/_.mcfunction",
+                    "content":[
+                        "#> rpg:asset/%namespace%/tick/_",
+                        "#",
+                        "# ItemのTick処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/item/.manager/tick/run.m",
+                        "",
+                        "# Tick処理"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Item / Init処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/rpg/function/asset/item/%namespace%/init/_.mcfunction",
+                    "content":[
+                        "#> rpg:asset/item/%namespace%/init/_",
+                        "#",
+                        "# ItemのInit処理",
+                        "#",
+                        "# @within function reizo_mcfunc_engin:asset/item/.manager/init/run.m",
+                        "",
+                        "# Init処理"
+                    ]
+                }
+            ]
+        }
+    ]
+}

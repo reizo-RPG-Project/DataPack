@@ -4,21 +4,29 @@
 #
 # @within function reizo_mcfunc_engin:asset/item/.manager/tick/run.m
 
+scoreboard players operation @s RPG.DEF = @s RPG.OriginDEF
+scoreboard players reset @s RPG.Item.0012.DEF_Math
+
 # お願いOMD!
 function #oh_my_dat:please
 
 # OMD内のデータを取り出す
 data modify storage reizo_mcfunc_engin:item 0012 set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].RPG.Item.0012
 
-# Combo
-    execute if score $Item.foreach.RunSlot reizo_mcfunc_Engin.Temp matches -3 store result score $Item.0012.Tick.ComboID.Head RPG.Temp run data get storage reizo_mcfunc_engin:item Field.ComboID
-    execute if score $Item.foreach.RunSlot reizo_mcfunc_Engin.Temp matches -4 store result score $Item.0012.Tick.ComboID.Chest RPG.Temp run data get storage reizo_mcfunc_engin:item Field.ComboID
-    execute if score $Item.foreach.RunSlot reizo_mcfunc_Engin.Temp matches -5 store result score $Item.0012.Tick.ComboID.Legs RPG.Temp run data get storage reizo_mcfunc_engin:item Field.ComboID
-    execute if score $Item.foreach.RunSlot reizo_mcfunc_Engin.Temp matches -6 store result score $Item.0012.Tick.ComboID.Feet RPG.Temp run data get storage reizo_mcfunc_engin:item Field.ComboID
+# 装備の動作
+function rpg:asset/item/0012.abstract_equipment/tick/equipment/_
+
+# DEF
+    # 足し算
+    scoreboard players operation @s RPG.Item.0012.DEF_Math += @s RPG.Item.0012.DEF_Math.Head
+    scoreboard players operation @s RPG.Item.0012.DEF_Math += @s RPG.Item.0012.DEF_Math.Chest
+    scoreboard players operation @s RPG.Item.0012.DEF_Math += @s RPG.Item.0012.DEF_Math.Legs
+    scoreboard players operation @s RPG.Item.0012.DEF_Math += @s RPG.Item.0012.DEF_Math.Feet
+    # 自分のステータスに足す
+    scoreboard players operation @s RPG.DEF += @s RPG.Item.0012.DEF_Math
 
 # 全て同じ値ならコンボ発動！
 execute if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Chest RPG.Temp if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Legs RPG.Temp if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Feet RPG.Temp run function rpg:asset/item/0012.abstract_equipment/tick/combo/run.m with storage reizo_mcfunc_engin:item Field
-
 
 # 戻す
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].RPG.Item.0012 set from storage reizo_mcfunc_engin:item 0012

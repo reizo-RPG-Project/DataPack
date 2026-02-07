@@ -6,6 +6,7 @@
 
 # ステータス関連
     function rpg:core/tick/player/status/hp/_
+    function rpg:core/tick/player/status/def/_
 
 # バニラ要素から一切のダメージを受けない
     effect give @s resistance infinite 10 true

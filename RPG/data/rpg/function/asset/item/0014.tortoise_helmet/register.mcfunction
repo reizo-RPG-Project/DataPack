@@ -25,4 +25,4 @@
     # ComboID
     data modify storage reizo_mcfunc_engin:item Field.ComboID set value 2
     # DEF
-    data modify storage reizo_mcfunc_engin:item Field.DEF set value 5
+    data modify storage reizo_mcfunc_engin:item Field.DEF set value 15

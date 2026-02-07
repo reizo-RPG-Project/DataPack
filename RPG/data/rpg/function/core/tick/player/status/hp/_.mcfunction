@@ -21,3 +21,7 @@ execute if score @s RPG.HP < @s RPG.HP_MAX run function rpg:core/tick/player/sta
     function rpg:core/tick/player/status/hp/bar.m with storage rpg:player HPRaito
     effect give @s health_boost infinite 0 true
     effect clear @s health_boost
+
+# お掃除
+data remove storage rpg:player HPRaito
+scoreboard players reset $Player.Status.HP.Raito RPG.Temp

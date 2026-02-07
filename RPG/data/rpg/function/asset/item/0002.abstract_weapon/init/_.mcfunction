@@ -7,6 +7,3 @@
 # AttackSpeedのセット
     data modify entity @s Item.components."minecraft:attribute_modifiers" append value {type:"attack_speed",amount:0,id:"minecraft:",slot:"any",operation:"add_value"}
     data modify entity @s Item.components."minecraft:attribute_modifiers"[-1].amount set from storage reizo_mcfunc_engin:item Field.AttackSpeed
-
-# 追加ステータスがあるならそれをloreに追加
-    execute if data storage reizo_mcfunc_engin:item Field.STR run function rpg:asset/item/0002.abstract_weapon/init/lore/str

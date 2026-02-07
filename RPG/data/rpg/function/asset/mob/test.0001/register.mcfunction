@@ -20,5 +20,7 @@
 # フィールド
     # HP
     data modify storage reizo_mcfunc_engin:mob Field.HP set value 100
+    # STR
+    data modify storage reizo_mcfunc_engin:mob Field.STR set value 10
     # DEF
     data modify storage reizo_mcfunc_engin:mob Field.DEF set value 100

@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "entity_hurt_player"
+        }
+    },
+    "rewards": {
+        "function": "rpg:core/tick/player/on_hurt/natural/combat"
+    }
+}

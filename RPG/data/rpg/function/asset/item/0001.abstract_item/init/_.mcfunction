@@ -5,7 +5,7 @@
 # @within function reizo_mcfunc_engin:asset/item/.manager/init/run.m
 
 # データの変更
-data modify entity @s Item.components."minecraft:tooltip_display".hidden_components set value ["attribute_modifiers"]
+data modify entity @s Item.components."minecraft:tooltip_display".hidden_components set value ["attribute_modifiers","unbreakable"]
 
 # Countのセット
 data modify entity @s Item.components."minecraft:max_stack_size" set from storage reizo_mcfunc_engin:item Field.Count

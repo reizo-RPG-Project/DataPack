@@ -4,6 +4,7 @@
 #
 # @within function reizo_mcfunc_engin:asset/item/.manager/tick/run.m
 
+# お掃除
 scoreboard players operation @s RPG.DEF = @s RPG.OriginDEF
 scoreboard players reset @s RPG.Item.0012.DEF_Math
 

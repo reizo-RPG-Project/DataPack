@@ -8,6 +8,9 @@
     # システム
     scoreboard objectives add RPG.Temp dummy
     scoreboard objectives add RPG.Const dummy
+    # プレイヤー
+    scoreboard objectives add RPG.FallDistance dummy
+    scoreboard objectives add RPG.FallDamageRes dummy
     # ステータス
     scoreboard objectives add RPG.HP dummy
     scoreboard objectives add RPG.HP_MAX dummy

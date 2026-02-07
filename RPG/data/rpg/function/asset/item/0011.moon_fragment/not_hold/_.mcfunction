@@ -5,10 +5,12 @@
 # @within function rpg:core/tick/player/_
 
 # データ取得
-data modify storage reizo_mcfunc_engin:item 0011.private.Gravity set from entity @s attributes[{id:"minecraft:gravity"}].base
+    data modify storage reizo_mcfunc_engin:item 0011.private.Gravity set from entity @s attributes[{id:"minecraft:gravity"}].base
+    data modify storage reizo_mcfunc_engin:item 0011.private.SafeFallDistance set from entity @s attributes[{id:"minecraft:safe_fall_distance"}].base
 
-# 重力を元に戻す
-execute if data storage reizo_mcfunc_engin:item 0011.private{Gravity:0.01} run attribute @s minecraft:gravity base reset
+# attributeを元に戻す
+    execute unless data storage reizo_mcfunc_engin:item 0011.private{Gravity:0.08} run attribute @s minecraft:gravity base reset
+    execute if data storage reizo_mcfunc_engin:item 0011.private{SafeFallDistance:7.0} run attribute @s minecraft:safe_fall_distance base reset
 
 # お掃除
 data remove storage reizo_mcfunc_engin:item 0011

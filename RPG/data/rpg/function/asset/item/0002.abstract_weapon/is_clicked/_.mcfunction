@@ -14,7 +14,7 @@ tag @s add RPG.Attacker
 # 当たり判定処理
 function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"rec/_"}
 
-# 
+# Hitしたやつへの処理
 execute as @e[tag=reizo_mcfunc_Engin.Mob,tag=RPG.Mob.0001.Enemy,tag=RPG.Mob.0001.Hit,type=!player] run function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"hit/_"}
 
 # お掃除

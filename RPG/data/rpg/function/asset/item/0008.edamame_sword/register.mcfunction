@@ -14,15 +14,15 @@
     # 名前 (TextComponentsString)
     data modify storage reizo_mcfunc_engin:item Register.Name set value [{"text":"名刀・",bold:0b},{"text":"ｴﾀﾞﾏﾒ",bold:1b},{"text":"ソード",bold:0b}]
     # 説明文 (TextComponentsString[])
-    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{"text":""},{"text":"※実在の人物とは一切関係ありません。",color:"gray",italic:0b}]
+    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{"text":"闇銀河戦士との戦いで、",color:"gray",italic:0b},{"text":"古代の勇者が使ったとされる剣。",color:"gray",italic:0b},{"text":"※実在の人物とは一切関係ありません。",color:"gray",italic:0b}]
 
 # フィールド
     # レア度
-    data modify storage reizo_mcfunc_engin:item Field.Rarity.Value set value 2
+    data modify storage reizo_mcfunc_engin:item Field.Rarity.Value set value 4
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Color set value "yellow"
     # FX
     data modify storage reizo_mcfunc_engin:item Field.FX.ID set value "0001"
     # 攻撃速度
     data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -3
     # 物理攻撃力
-    data modify storage reizo_mcfunc_engin:item Field.STR set value 8
+    data modify storage reizo_mcfunc_engin:item Field.STR set value 25

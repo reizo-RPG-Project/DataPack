@@ -4,6 +4,9 @@
 #
 # @within function rpg:core/tick/player/_
 
+# revivalタグが付いているなら動作を打ち切り
+execute if entity @s[tag=RPG.Is_Can_Revival] run return 0
+
 # リスポーン
 execute in overworld run tp 3.5 20.0 -17.5
 

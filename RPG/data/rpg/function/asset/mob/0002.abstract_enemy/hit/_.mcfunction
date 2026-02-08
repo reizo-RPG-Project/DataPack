@@ -18,4 +18,3 @@ execute if score @s RPG.HP matches ..0 run function reizo_mcfunc_engin:api/mob/r
 
 # お掃除
 tag @s remove RPG.Mob.0001.Hit
-scoreboard players reset @s reizo_mcfunc_Engin.ScoreID

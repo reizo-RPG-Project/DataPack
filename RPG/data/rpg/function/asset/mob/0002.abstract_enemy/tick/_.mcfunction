@@ -4,6 +4,9 @@
 #
 # @within function reizo_mcfunc_engin:asset/mob/.manager/tick/run.m
 
+# AIタイマーアップ
+scoreboard players add @s RPG.Mob.0002.AITimer 1
+
 # Hitタグが付いたならヒット処理をする
 execute if entity @s[tag=RPG.Mob.0001.Hit] run function reizo_mcfunc_engin:api/call/_protected.m {Type:"mob",Method:"hit/_"}
 

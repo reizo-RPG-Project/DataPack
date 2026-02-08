@@ -23,6 +23,8 @@
     # その他
     scoreboard objectives add RPG.DMG dummy
     # アセット
+        # Mob
+        scoreboard objectives add RPG.Mob.0002.AITimer dummy
         # Item
         scoreboard objectives add RPG.Item.0012.DEF_Math dummy
         scoreboard objectives add RPG.Item.0012.DEF_Math.Head dummy

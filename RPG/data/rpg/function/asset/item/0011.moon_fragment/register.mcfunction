@@ -14,7 +14,7 @@
     # 名前 (TextComponentsString)
     data modify storage reizo_mcfunc_engin:item Register.Name set value [{"text":"月",bold:1b},{"text":"の",bold:0b},{"text":"ｶｹﾗ",bold:1b}]
     # 説明文 (TextComponentsString[])
-    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{"text":"月の重力がこめられた不思議なカケラ",color:"gray",italic:0b}]
+    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{"text":"月の重力がこめられた不思議なカケラ",color:"gray",italic:0b},{"text":"落下ダメージにご注意を...",color:"gray",italic:0b}]
     # アイテムを持っていない場合でも動作させるかどうか。 boolean型
     data modify storage reizo_mcfunc_engin:item Register.NotHold set value 1b
 

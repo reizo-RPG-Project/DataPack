@@ -9,7 +9,7 @@ tag @s add This
 
 # もらうダメージの計算
     execute if data storage reizo_mcfunc_engin:context data.Field.STR run function rpg:asset/item/0002.abstract_weapon/hit/dmg_dealt/str
-    # TODO:魔法攻撃力も足しとけ。
+    execute if data storage reizo_mcfunc_engin:context data.Field.INT run function rpg:asset/item/0002.abstract_weapon/hit/dmg_dealt/int
 
 # ノックバック
     # データ取得
@@ -25,3 +25,4 @@ execute as @p[tag=RPG.Attacker] run function rpg:asset/item/0002.abstract_weapon
 
 # お掃除
 tag @s remove This
+scoreboard players reset $Item.0002.Hit.Weapon.Dmg

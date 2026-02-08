@@ -12,7 +12,7 @@ tag @s add RPG.Attacker
     execute if predicate rpg:click_detection/uncharge run function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"uncharged/_"}
 
 # 当たり判定処理
-function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"rec/_"}
+execute anchored eyes positioned ^ ^ ^ run function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"rec/_"}
 
 # Hitしたやつへの処理
 execute as @e[tag=reizo_mcfunc_Engin.Mob,tag=RPG.Mob.0001.Enemy,tag=RPG.Mob.0001.Hit,type=!player,distance=..100] run function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"hit/_"}

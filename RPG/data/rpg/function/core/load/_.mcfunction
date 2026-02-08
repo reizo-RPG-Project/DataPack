@@ -17,6 +17,7 @@
     scoreboard objectives add RPG.HP_regen dummy
     scoreboard objectives add RPG.HP_Timer dummy
     scoreboard objectives add RPG.STR dummy
+    scoreboard objectives add RPG.INT dummy
     scoreboard objectives add RPG.DEF dummy
     scoreboard objectives add RPG.OriginDEF dummy
     # その他

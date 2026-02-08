@@ -20,7 +20,7 @@
     # レア度
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Value set value 2
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Color set value "yellow"
-    # 攻撃速度
-    data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -1.6
     # 物理攻撃力
     data modify storage reizo_mcfunc_engin:item Field.STR set value 7
+    # 攻撃速度
+    data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -1.6

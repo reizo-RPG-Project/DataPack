@@ -1,4 +1,4 @@
-#> rpg:asset/item/0003.abstract_sword/register
+#> rpg:asset/item/0020.abstract_wand/register
 #
 # 
 #
@@ -10,11 +10,11 @@
     # 継承されないかどうか。 boolean型
     data modify storage reizo_mcfunc_engin:item Register.Final set value 0b
     # 継承されることを前提とした、抽象的なMobかどうか。
-    data modify storage reizo_mcfunc_engin:item Register.IsAbstract set value 0b
+    data modify storage reizo_mcfunc_engin:item Register.IsAbstract set value 1b
 
 # フィールド
-    # 物理攻撃力
-    # data modify storage reizo_mcfunc_engin:item Field.STR set value 1
+    # 魔法攻撃力
+    # data modify storage reizo_mcfunc_engin:item Field.INT set value 1
     # Abstract系統
         # ノックバック力
-        data modify storage reizo_mcfunc_engin:item Field.KnockBack set value 100
+        data modify storage reizo_mcfunc_engin:item Field.KnockBack set value 0

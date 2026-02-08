@@ -22,7 +22,7 @@
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Color set value "yellow"
     # FX
     data modify storage reizo_mcfunc_engin:item Field.FX.ID set value "0001"
-    # 攻撃速度
-    data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -3
     # 物理攻撃力
     data modify storage reizo_mcfunc_engin:item Field.STR set value 25
+    # 攻撃速度
+    data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -3

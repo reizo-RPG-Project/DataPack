@@ -22,6 +22,8 @@
     # data modify storage reizo_mcfunc_engin:item Field.STR set value 1
     # 魔法攻撃力
     # data modify storage reizo_mcfunc_engin:item Field.INT set value 1
+    # 攻撃速度
+    # data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -1
     # Abstract系統
         # ノックバック力
         # data modify storage reizo_mcfunc_engin:item Field.KnockBack set value 1

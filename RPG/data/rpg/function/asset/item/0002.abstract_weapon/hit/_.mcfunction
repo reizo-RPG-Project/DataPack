@@ -20,7 +20,7 @@ tag @s add This
     execute rotated ~ ~60 run function reizo_libs:motion/knok_back
 
 # チャージ率に応じてダメージ補正
-execute as @p[tag=RPG.Attacker] run function rpg:asset/item/0002.abstract_weapon/hit/dmg_correction/_
+function rpg:asset/item/0002.abstract_weapon/hit/dmg_correction/_
     # TODO:いつかprojectileもたせ！
 
 # お掃除

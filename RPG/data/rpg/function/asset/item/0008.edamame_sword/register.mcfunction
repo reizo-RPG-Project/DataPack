@@ -23,6 +23,6 @@
     # FX
     data modify storage reizo_mcfunc_engin:item Field.FX.ID set value "0001"
     # 物理攻撃力
-    data modify storage reizo_mcfunc_engin:item Field.STR set value 25
+    data modify storage reizo_mcfunc_engin:item Field.STR set value 35
     # 攻撃速度
     data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -3

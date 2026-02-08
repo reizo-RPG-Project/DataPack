@@ -7,6 +7,9 @@
 # 防御力計算
 function rpg:common/status/def/dmg_reduction
 
+# ダメージブレ
+function rpg:common/damage/blur
+
 # HPを減らす
 scoreboard players operation @s RPG.HP -= @s RPG.DMG
 

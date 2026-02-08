@@ -15,7 +15,7 @@ tag @s add RPG.Attacker
 function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"rec/_"}
 
 # Hitしたやつへの処理
-execute as @e[tag=reizo_mcfunc_Engin.Mob,tag=RPG.Mob.0001.Enemy,tag=RPG.Mob.0001.Hit,type=!player] run function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"hit/_"}
+execute as @e[tag=reizo_mcfunc_Engin.Mob,tag=RPG.Mob.0001.Enemy,tag=RPG.Mob.0001.Hit,type=!player,distance=..100] run function reizo_mcfunc_engin:api/call/_protected.m {Type:"item",Method:"hit/_"}
 
 # お掃除
     tag @s remove RPG.Input.IsClicked

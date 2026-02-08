@@ -19,3 +19,6 @@ execute if score @s RPG.FallDistance matches 1..399 run scoreboard players reset
 
 # データ取得
 function rpg:core/tick/player/get_data/_
+
+# 死
+execute if entity @s[tag=RPG.Death] run function rpg:core/tick/player/on_death/_

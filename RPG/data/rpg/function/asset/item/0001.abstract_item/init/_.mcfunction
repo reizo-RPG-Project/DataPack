@@ -14,8 +14,6 @@ data modify entity @s Item.components."minecraft:max_stack_size" set from storag
 function rpg:asset/item/0001.abstract_item/init/lore/_
 
 # レア度のセット
-    # 最初にRegister側のloreを変更する。
-    data modify entity @s Item.components."minecraft:lore" set from storage reizo_mcfunc_engin:context Register.Lore
     # データを反映する。
     function rpg:asset/item/0001.abstract_item/init/rarity/set_data
     # 色の反映

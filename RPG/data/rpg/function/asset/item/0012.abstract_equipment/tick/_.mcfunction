@@ -27,7 +27,7 @@ function rpg:asset/item/0012.abstract_equipment/tick/equipment/_
     scoreboard players operation @s RPG.DEF += @s RPG.Item.0012.DEF_Math
 
 # 全て同じ値ならコンボ発動！
-execute if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Chest RPG.Temp if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Legs RPG.Temp if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Feet RPG.Temp run function rpg:asset/item/0012.abstract_equipment/tick/combo/run.m with storage reizo_mcfunc_engin:item Field
+execute if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Chest RPG.Temp if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Legs RPG.Temp if score $Item.0012.Tick.ComboID.Head RPG.Temp = $Item.0012.Tick.ComboID.Feet RPG.Temp run function rpg:asset/item/0012.abstract_equipment/tick/combo/run.m with storage reizo_mcfunc_engin:context data.Field
 
 # 戻す
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].RPG.Item.0012 set from storage reizo_mcfunc_engin:item 0012

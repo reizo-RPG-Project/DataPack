@@ -17,7 +17,7 @@
     data modify storage reizo_mcfunc_engin:mob Register.DethItem_Empty set value 1b
     # 持っているアイテム String型
         # head
-        data modify storage reizo_mcfunc_engin:mob Register.Head set value {id:"lether_helmet"}
+        data modify storage reizo_mcfunc_engin:mob Register.Head set value {id:"leather_helmet"}
 
 # フィールド
     # HP

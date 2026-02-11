@@ -1,4 +1,4 @@
-#> rpg:asset/item/0024.him_wand/register
+#> rpg:asset/item/0025.amethyst_wand/register
 #
 # 
 #
@@ -12,15 +12,15 @@
     # 継承されることを前提とした、抽象的なMobかどうか。
     data modify storage reizo_mcfunc_engin:item Register.IsAbstract set value 0b
     # 名前 (TextComponentsString)
-    data modify storage reizo_mcfunc_engin:item Register.Name set value {"text":"彼の杖"}
+    data modify storage reizo_mcfunc_engin:item Register.Name set value {"text":"アメジストの杖"}
     # 説明文 (TextComponentsString[])
-    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{"text":" 彼 が使っていた杖",color:"gray",italic:0b}]
+    data modify storage reizo_mcfunc_engin:item Register.Lore set value [{"text":"綺麗だ。しかし...叩くと痛い。",color:"gray",italic:0b}]
 
 # フィールド
     # レア度
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Value set value 3
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Color set value "yellow"
     # 魔法攻撃力
-    data modify storage reizo_mcfunc_engin:item Field.INT set value 21
+    data modify storage reizo_mcfunc_engin:item Field.INT set value 9
     # 攻撃速度
     data modify storage reizo_mcfunc_engin:item Field.AttackSpeed set value -1

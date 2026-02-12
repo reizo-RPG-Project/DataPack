@@ -18,7 +18,7 @@
 
 # フィールド
     # レア度
-    data modify storage reizo_mcfunc_engin:item Field.Rarity.Value set value 4
+    data modify storage reizo_mcfunc_engin:item Field.Rarity.Value set value 5
     data modify storage reizo_mcfunc_engin:item Field.Rarity.Color set value "yellow"
     # FX
     data modify storage reizo_mcfunc_engin:item Field.FX.ID set value "0001"

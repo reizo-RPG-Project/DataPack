@@ -12,7 +12,7 @@
     # 継承されることを前提とした、抽象的なMobかどうか。
     data modify storage reizo_mcfunc_engin:mob Register.IsAbstract set value 0b
     # 名前 String型
-    data modify storage reizo_mcfunc_engin:mob Register.Name set value "盗賊"
+    data modify storage reizo_mcfunc_engin:mob Register.Name set value "補影"
     # アイテムを落とさないか？ boolean型
     data modify storage reizo_mcfunc_engin:mob Register.DethItem_Empty set value 1b
 

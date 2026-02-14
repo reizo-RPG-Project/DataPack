@@ -24,6 +24,7 @@
     scoreboard objectives add RPG.DMG dummy
     # アセット
         # Mob
+        scoreboard objectives add RPG.Mob.0002.SeriouslyValue dummy
         scoreboard objectives add RPG.Mob.0002.AITimer dummy
         # Item
         scoreboard objectives add RPG.Item.0012.DEF_Math dummy
@@ -34,6 +35,8 @@
 
 # 定数
 scoreboard players set #2 RPG.Const 2
+scoreboard players set #3 RPG.Const 3
+scoreboard players set #4 RPG.Const 4
 scoreboard players set #8 RPG.Const 8
 scoreboard players set #10 RPG.Const 10
 scoreboard players set #25 RPG.Const 25

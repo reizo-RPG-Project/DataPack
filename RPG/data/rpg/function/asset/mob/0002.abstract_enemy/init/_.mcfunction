@@ -15,3 +15,7 @@
 # 自然的な要因で死なないように
     effect give @s regeneration infinite 255 true
     effect give @s[type=#undead] instant_damage infinite 0 true
+
+# 本気モードの計算
+    scoreboard players operation @s RPG.Mob.0002.SeriouslyValue = @s RPG.HP
+    scoreboard players operation @s RPG.Mob.0002.SeriouslyValue /= #3 RPG.Const

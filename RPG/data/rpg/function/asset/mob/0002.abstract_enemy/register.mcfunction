@@ -23,3 +23,5 @@
     # data modify storage reizo_mcfunc_engin:mob Field.HP set value 10
     # DEF
     # data modify storage reizo_mcfunc_engin:mob Field.DEF set value 50
+    # 本気モード
+    # data modify storage reizo_mcfunc_engin:mob Field.Seriously set value 1b

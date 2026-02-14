@@ -7,6 +7,9 @@
 # 敵対時のメソッド
 execute if predicate rpg:asset/mob/0002/in_hostil run function reizo_mcfunc_engin:api/call/_protected.m {Type:"mob",Method:"in_hostile/_"}
 
+# これが俺の...本気だ！
+execute if data storage reizo_mcfunc_engin:context data.Field{Seriously:1b} if score @s RPG.Mob.0002.SeriouslyValue >= @s RPG.HP run function reizo_mcfunc_engin:api/call/_protected.m {Type:"mob",Method:"in_seriously/_"}
+
 # 誰とも敵対していない場合、タイマーをリセット
 execute if entity @s[predicate=!rpg:asset/mob/0002/in_hostil] run scoreboard players reset @s RPG.Mob.0002.AITimer
 

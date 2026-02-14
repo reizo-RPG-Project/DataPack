@@ -26,6 +26,12 @@
         # Mob
         scoreboard objectives add RPG.Mob.0002.SeriouslyValue dummy
         scoreboard objectives add RPG.Mob.0002.AITimer dummy
+        scoreboard objectives add RPG.Mob.0005.Timer dummy
+        scoreboard objectives add RPG.Mob.0005.Start_Time dummy
+        scoreboard objectives add RPG.Mob.0005.Start_Time.Temp dummy
+        scoreboard objectives add RPG.Mob.0005.Reset_Time dummy
+        scoreboard objectives add RPG.Mob.0005.Summon_Time dummy
+        scoreboard objectives add RPG.Mob.0005.Summon dummy
         # Item
         scoreboard objectives add RPG.Item.0012.DEF_Math dummy
         scoreboard objectives add RPG.Item.0012.DEF_Math.Head dummy

@@ -8,4 +8,5 @@
 scoreboard players add @s RPG.STR 7
 
 # Motion適応
-execute rotated ~ ~60 run function reizo_libs:motion/pounce_on
+    scoreboard players set $MotionPower reizo_mcfunc_Engin.Temp 180
+    execute rotated ~ ~60 run function reizo_libs:motion/pounce_on

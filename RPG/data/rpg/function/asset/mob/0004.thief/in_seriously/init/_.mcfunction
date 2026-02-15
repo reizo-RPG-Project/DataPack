@@ -8,9 +8,7 @@
 execute at @a[tag=RPG.Mob.0002.Target] run function rpg:asset/mob/0004.thief/in_seriously/init/target
 
 # 演出
-    execute rotated 0 0 run function rpg:asset/mob/0004.thief/common/fx/1
-    execute rotated 0 0 positioned ~ ~0.75 ~ run function rpg:asset/mob/0004.thief/common/fx/2
-    execute rotated 0 0 positioned ~ ~1.5 ~ run function rpg:asset/mob/0004.thief/common/fx/1
+particle witch ~ ~1 ~ 0.3 0.5 0.3 0 25
 
 # 足が早くなる
 effect give @s speed infinite 2 true

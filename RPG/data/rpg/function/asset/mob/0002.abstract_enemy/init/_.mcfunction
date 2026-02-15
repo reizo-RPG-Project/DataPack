@@ -16,6 +16,5 @@
     effect give @s regeneration infinite 255 true
     effect give @s[type=#undead] instant_damage infinite 0 true
 
-# 本気モードの計算
-    scoreboard players operation @s RPG.Mob.0002.SeriouslyValue = @s RPG.HP
-    scoreboard players operation @s RPG.Mob.0002.SeriouslyValue /= #3 RPG.Const
+# 本気モード
+execute if data storage reizo_mcfunc_engin:mob Field{Seriously:1b} run function rpg:asset/mob/0002.abstract_enemy/init/seriously

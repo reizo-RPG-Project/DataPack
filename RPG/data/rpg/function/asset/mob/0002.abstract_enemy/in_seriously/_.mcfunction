@@ -5,4 +5,4 @@
 # @within function rpg:asset/mob/0002.abstract_enemy/tick/_
 
 # 真剣になりやがった。
-execute unless data entity @s data.Field.GotSeriously run data modify entity @s data.Field.GotSeriously set value 1b
+execute unless data entity @s data.Field.GotSeriously run function reizo_mcfunc_engin:api/call/_protected.m {Type:"mob",Method:"in_seriously_init/_"}

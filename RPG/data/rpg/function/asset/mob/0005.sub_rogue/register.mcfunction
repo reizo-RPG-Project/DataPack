@@ -23,5 +23,3 @@
     data modify storage reizo_mcfunc_engin:mob Field.DEF set value 100
     # 本気モード
     data modify storage reizo_mcfunc_engin:mob Field.Seriously set value 1b
-
-# Warning:このMobはなんかすげぇ重いぞ！

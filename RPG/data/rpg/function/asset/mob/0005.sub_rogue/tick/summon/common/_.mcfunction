@@ -8,12 +8,11 @@
 scoreboard players add @s RPG.Mob.0005.Summon 1
 
 # スコアによって変える
-execute if score @s RPG.Mob.0005.Summon matches 1 run function rpg:asset/mob/0005.sub_rogue/tick/summon/1
-execute if score @s RPG.Mob.0005.Summon matches 2 run function rpg:asset/mob/0005.sub_rogue/tick/summon/2
-execute if score @s RPG.Mob.0005.Summon matches 3 run function rpg:asset/mob/0005.sub_rogue/tick/summon/3
+function rpg:asset/mob/0005.sub_rogue/tick/summon/common/check
 
 # 召喚
-function reizo_libs:for/_
+    execute if data storage reizo_mcfunc_engin:mob 0005.private.zombie run function rpg:asset/mob/0005.sub_rogue/tick/summon/mob/zombie
+    execute if data storage reizo_mcfunc_engin:mob 0005.private.zombie_kid run function rpg:asset/mob/0005.sub_rogue/tick/summon/mob/zombie_kid
 
 # 召喚した敵に幻影であることを示すタグをつける
 tag @e[tag=reizo_mcfunc_Engin.Mob,tag=RPG.Mob.0001.Enemy,distance=..0] add RPG.Mob.0005.Illusion

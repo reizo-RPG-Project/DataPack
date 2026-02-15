@@ -9,4 +9,4 @@
     playsound entity.player.teleport master @a[tag=RPG.Mob.0002.Target] ~ ~ ~ 1
 
 # プレイヤーの後ろにテレポート
-tp @s ^ ^ ^-5
+execute positioned ^ ^ ^-5 run function rpg:asset/mob/0004.thief/in_seriously/init/tp/_

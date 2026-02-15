@@ -9,5 +9,3 @@ execute as @e[tag=reizo_mcfunc_Engin.Mob,tag=RPG.Mob.0005.Illusion] if score @s 
 
 # 親クラス動作の呼び出し
 function reizo_mcfunc_engin:api/super/_.m {Type:"mob",Method:"remove/_"}
-
-#1 RME内でのremoveで、stashとpopをすることにより解決！

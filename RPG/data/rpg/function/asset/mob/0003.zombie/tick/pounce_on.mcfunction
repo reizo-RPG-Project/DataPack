@@ -1,4 +1,4 @@
-#> rpg:asset/mob/0003.zombie/pounce_on/_
+#> rpg:asset/mob/0003.zombie/tick/pounce_on
 #
 # 
 #

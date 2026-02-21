@@ -21,6 +21,7 @@
     scoreboard objectives add RPG.DEF dummy
     scoreboard objectives add RPG.OriginDEF dummy
     # その他
+    scoreboard objectives add RPG.Dungeon dummy
     scoreboard objectives add RPG.DMG dummy
 
 # 定数

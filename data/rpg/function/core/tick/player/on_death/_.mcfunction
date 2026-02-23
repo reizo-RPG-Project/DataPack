@@ -8,7 +8,7 @@
 execute if entity @s[tag=RPG.Is_Can_Revival] run return 0
 
 # リスポーン
-execute in overworld run tp 3.5 20.0 -17.5
+execute in overworld run tp -8 25 -5
 
 # 目の前真っ暗
     effect give @s darkness 3 0 true

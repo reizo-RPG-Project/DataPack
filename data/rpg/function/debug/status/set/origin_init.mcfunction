@@ -4,6 +4,7 @@
 #
 # @user
 
-scoreboard players set @s RPG.OriginSTR 10
-scoreboard players set @s RPG.OriginINT 10
-scoreboard players set @s RPG.OriginDEF 50
+# セット
+    scoreboard players set @s RPG.OriginSTR 10
+    scoreboard players set @s RPG.OriginINT 10
+    scoreboard players set @s RPG.OriginDEF 50

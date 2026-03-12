@@ -14,6 +14,7 @@
     # ステータス
     scoreboard objectives add RPG.HP dummy
     scoreboard objectives add RPG.HP_MAX dummy
+    scoreboard objectives add RPG.OriginHP_MAX dummy
     scoreboard objectives add RPG.HP_regen dummy
     scoreboard objectives add RPG.HP_Timer dummy
     scoreboard objectives add RPG.STR dummy

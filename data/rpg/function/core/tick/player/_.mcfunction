@@ -18,6 +18,3 @@ function rpg:core/tick/player/status/hp/_
 
 # データ取得
 function rpg:core/tick/player/get_data/_
-
-# 死
-execute if entity @s[tag=RPG.Death] run function rpg:core/tick/player/on_death/_

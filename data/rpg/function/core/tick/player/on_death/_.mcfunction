@@ -18,6 +18,3 @@ execute in overworld run tp -8 25 -5
     effect give @s saturation 1 20
     scoreboard players operation @s RPG.HP = @s RPG.HP_MAX
     # scoreboard players operation @s MP = @s MPMax
-
-# お掃除
-tag @s remove RPG.Death

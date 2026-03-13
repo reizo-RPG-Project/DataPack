@@ -14,7 +14,7 @@ function rpg:common/damage/blur
 scoreboard players operation @s RPG.HP -= @s RPG.DMG
 
 # 死んだ
-execute if score @s RPG.HP matches ..0 run tag @s add RPG.Death
+execute if score @s RPG.HP matches ..0 run function rpg:core/tick/player/on_death/_
 
 # お掃除
 scoreboard players reset @s RPG.DEF

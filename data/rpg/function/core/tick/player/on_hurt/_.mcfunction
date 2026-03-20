@@ -17,5 +17,4 @@ scoreboard players operation @s RPG.HP -= @s RPG.DMG
 execute if score @s RPG.HP matches ..0 run function rpg:core/tick/player/on_death/_
 
 # お掃除
-scoreboard players reset @s RPG.DEF
 # data remove storage rpg:lib Damage

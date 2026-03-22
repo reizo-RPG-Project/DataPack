@@ -5,7 +5,7 @@
             "conditions": {
                 "damage": {
                     "source_entity": {
-                        "nbt": "{Tags:[\"RPG.Mob.0001.Enemy\",\"reizo_mcfunc_Engin.Mob\"]}"
+                        "nbt": "{Tags:[\"RPG.Mob.0002.Enemy\",\"reizo_mcfunc_Engin.Mob\"]}"
                     }
                 }
             }

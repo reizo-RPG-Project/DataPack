@@ -40,3 +40,6 @@ scoreboard players set #512 RPG.Const 512
 scoreboard players set #2000 RPG.Const 2000
 scoreboard players set #32768 RPG.Const 32768
 scoreboard players set #65536 RPG.Const 65536
+
+# Debug
+scoreboard objectives add RPG.Debug.Status dummy

@@ -19,3 +19,6 @@ function rpg:core/tick/player/status/debug
 
 # データ取得
 function rpg:core/tick/player/get_data/_
+
+# 特殊なアイテムの動作
+execute if items entity @s container.* #rpg:unique/all run function rpg:core/tick/player/unique_item/_

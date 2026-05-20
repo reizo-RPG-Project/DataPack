@@ -22,7 +22,7 @@
     function reizo_mcfunc_engin:api/item/box.m {ID:"0046.copper_boots",namespace:"rpg"}
     item replace entity @s container.7 from block 10000 0 10000 container.0
     function reizo_mcfunc_engin:api/item/box.m {ID:"0014.tortoise_helmet",namespace:"rpg"}
-    item replace entity @s container.8 from block 10000 0 10000 container.0
+    item replace entity @s container.18 from block 10000 0 10000 container.0
     function reizo_mcfunc_engin:api/item/box.m {ID:"0050.pot_helmet",namespace:"rpg"}
     item replace entity @s container.27 from block 10000 0 10000 container.0
     function reizo_mcfunc_engin:api/item/box.m {ID:"0051.juck_o_luntern",namespace:"rpg"}
@@ -39,3 +39,8 @@
     item replace entity @s container.33 from block 10000 0 10000 container.0
     function reizo_mcfunc_engin:api/item/box.m {ID:"0055.copper_slime_boots",namespace:"rpg"}
     item replace entity @s container.34 from block 10000 0 10000 container.0
+    function reizo_mcfunc_engin:api/item/box.m {ID:"0060.iron_slime_boots",namespace:"rpg"}
+    item replace entity @s container.35 from block 10000 0 10000 container.0
+
+# お掃除
+item replace block 10000 0 10000 container.0 with air

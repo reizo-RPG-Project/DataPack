@@ -4,6 +4,12 @@
 #
 # @within function rpg:core/tick/player/_
 
+# MPがMPの上限値を超えてしまった場合は、HPをHPの上限値に合わせる。
+execute if score @s RPG.MP >= @s RPG.MP_MAX run scoreboard players operation @s RPG.MP = @s RPG.MP_MAX
+
+# 自然回復
+execute if score @s RPG.MP < @s RPG.MP_MAX run function rpg:core/tick/player/status/mp/regen/_
+
 # 経験値バーをMP表示用とする
     # 計算
         scoreboard players operation $MPRatio RPG.Temp = @s RPG.MP

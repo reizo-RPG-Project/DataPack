@@ -9,6 +9,7 @@ execute if score @s RPG.FallDistance matches 1..399 run scoreboard players reset
 
 # ステータス関連
     function rpg:core/tick/player/status/hp/_
+    function rpg:core/tick/player/status/mp/_
     function rpg:core/tick/player/status/def/_
 function rpg:core/tick/player/status/debug
 

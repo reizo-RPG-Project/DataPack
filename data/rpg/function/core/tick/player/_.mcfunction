@@ -19,6 +19,9 @@ function rpg:core/tick/player/status/debug
     effect clear @s absorption
     effect clear @s slowness
 
+# 一生満腹
+effect give @s saturation infinite 10 true
+
 # データ取得
 function rpg:core/tick/player/get_data/_
 

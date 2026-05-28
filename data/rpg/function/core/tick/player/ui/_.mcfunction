@@ -14,21 +14,20 @@
         data modify storage ui: DEF.legs set from entity @s equipment.legs.components."minecraft:custom_data".Item.Field.DEF
         data modify storage ui: DEF.feet set from entity @s equipment.feet.components."minecraft:custom_data".Item.Field.DEF
 
-# 表示用データセット
-    # HP
-        data modify storage ui: display append value ["",{"text":"\uF80D",font:"space"},{"text":"\uE007",font:"icon/_"}," ",{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}]
-        execute if score $HP RPG.Temp matches ..5 run data modify storage ui: display[-1][-1].color set value "red"
     # DEF
-    execute if data storage ui: DEF.head run data modify storage ui: display[-1] append value ["",{"text":"\uF80A",font:"space"},{"text":"0",font:"icon/armor/head/_"},{storage:"ui:",nbt:"DEF.head",font:"icon/armor/head/num",color:"white"}]
-    execute if data storage ui: DEF.chest run data modify storage ui: display[-1] append value ["",{"text":"\uF80A",font:"space"},{"text":"1",font:"icon/armor/chest/_"},{storage:"ui:",nbt:"DEF.chest",font:"icon/armor/chest/num",color:"white"}]
-    execute if data storage ui: DEF.legs run data modify storage ui: display[-1] append value ["",{"text":"\uF802\uF80A",font:"space"},{"text":"2",font:"icon/armor/legs/_"},{storage:"ui:",nbt:"DEF.legs",font:"icon/armor/legs/num",color:"white"}]
-    execute if data storage ui: DEF.feet run data modify storage ui: display[-1] append value ["",{"text":"\uF80A",font:"space"},{"text":"3",font:"icon/armor/feet/_"},{storage:"ui:",nbt:"DEF.feet",font:"icon/armor/feet/num",color:"white"}]
+    execute if data storage ui: DEF run function rpg:core/tick/player/ui/def/_
+
+# 表示用データセット
+    # 右左
+        data modify storage ui: alignR set value ["",{"storage":"ui:",nbt:"DEF.data",interpret:true},{text:"\uF823",font:"space"},{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}]
+        data modify storage ui: alignL set value ["",{text:"\uF82F",font:"space"}]
+        execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignR[-1].color set value "red"
 
 # 表示
-title @s actionbar {"storage":"ui:",nbt:"display",interpret:true}
+title @s actionbar ["",{"text":"\uF82F",font:"space"},{"text":"\uF80B\uF809",font:"space"},{"storage":"ui:",nbt:"alignR",interpret:true},{text:"\uF82F",font:"space"},{"storage":"ui:",nbt:"alignR",interpret:true}]
 
 # お掃除
-    data remove storage ui: display
+    data remove storage ui: alignR
+    data remove storage ui: alignL
     data remove storage ui: DEF
     scoreboard players reset $HP RPG.Temp
-    scoreboard players reset $DEF RPG.Temp

@@ -19,17 +19,16 @@
 
 # 表示用データセット
     # 右左
-        data modify storage ui: alignR set value ["",{"storage":"ui:",nbt:"DEF.data",interpret:true},{text:"\uF823",font:"space"},{"text":"\uF800",font:"space"},{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}]
-        data modify storage ui: alignL set value ["",{text:"\uF82F",font:"space"}]
+        data modify storage ui: alignR set value ["",{text:"\uF82B\uF82A\uF825",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
+        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"},{text:"\uF80B\uF80A\uF808\uF803",font:"space"}]
     # HPが減ってたら赤くする
-    execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignR[-1].color set value "red"
+    execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[-2].color set value "red"
     # HPがなんの位にあるかでずらす
-        execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignR[3].text set value "\uF828\uF824"
-        execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignR[3].text set value "\uF826"
-
+        execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1] set value {"text":"\uF80B\uF80A\uF821",font:"space"}
+        execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1] set value {text:"\uF80B\uF80A\uF805",font:"space"}
 
 # 表示
-title @s actionbar ["",{"text":"\uF82F",font:"space"},{"text":"\uF80B\uF809",font:"space"},{"storage":"ui:",nbt:"alignR",interpret:true},{text:"\uF82F",font:"space"},{"storage":"ui:",nbt:"alignR",interpret:true}]
+title @s actionbar ["",{"storage":"ui:",nbt:"alignL",interpret:true},{"text":"\uF82F",font:"space"},{"storage":"ui:",nbt:"alignL",interpret:true},{"text":"\uF80B\uF809",font:"space"},{"storage":"ui:",nbt:"alignR",interpret:true},{text:"\uF82F",font:"space"},{"storage":"ui:",nbt:"alignR",interpret:true}]
 
 # お掃除
     data remove storage ui: alignR

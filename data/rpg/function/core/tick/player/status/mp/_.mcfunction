@@ -17,3 +17,10 @@ execute if score @s RPG.MP < @s RPG.MP_MAX run function rpg:core/tick/player/sta
         scoreboard players operation $MPRatio RPG.Temp /= @s RPG.MP_MAX
     # 前の奴と今回の値が同じではないなら表示
     execute unless score $MPRatio RPG.Temp = @s RPG.MP_OldRaito run function rpg:core/tick/player/status/mp/bar/_
+    # しかし、見えているレベルがMP_MAXより大きければ再表示
+        # レベル取得
+        execute store result score $Level RPG.Temp run xp query @s levels
+        # 不一致なら再表示
+        execute if score @s RPG.MP_MAX < $Level RPG.Temp run function rpg:core/tick/player/status/mp/bar/_
+        # お掃除
+        scoreboard players reset $Level RPG.Temp

@@ -13,6 +13,7 @@ scoreboard players set #10 RPG.Const 10
 scoreboard players set #25 RPG.Const 25
 scoreboard players set #30 RPG.Const 30
 scoreboard players set #40 RPG.Const 40
+scoreboard players set #56 RPG.Const 56
 scoreboard players set #80 RPG.Const 80
 scoreboard players set #200 RPG.Const 200
 scoreboard players set #512 RPG.Const 512

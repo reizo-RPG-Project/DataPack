@@ -27,7 +27,7 @@
 # 表示用データセット
     # 右左
         data modify storage ui: alignR set value ["",{text:"\uF82B\uF82A",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
-        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"},{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{text:"\uF80C\uF809\uF803",font:"space"}]
+        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}," ",{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{text:"\uF80C\uF809\uF806",font:"space"}]
     # HPが減ってたら赤くする
     execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[-2].color set value "#b95c5c"
     # HPがなんの位にあるかでずらす

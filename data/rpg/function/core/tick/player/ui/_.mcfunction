@@ -31,8 +31,8 @@
     # HPが減ってたら赤くする
     execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[-2].color set value "#b95c5c"
     # HPがなんの位にあるかでずらす
-        execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1] set value {"text":"\uF80A\uF808\uF807",font:"space"}
-        execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1] set value {text:"\uF80A\uF809\uF805",font:"space"}
+        execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1].text set value "\uF80C\uF808\uF802"
+        execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1].text set value "\uF80C\uF809"
     # DEFの頭が無かったらずらす
     execute unless data storage ui: DEF.head run data modify storage ui: alignR[1].text set value "\uF82B\uF829\uF827"
     # オフハンドにアイテムがあったら

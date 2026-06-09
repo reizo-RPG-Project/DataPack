@@ -29,7 +29,7 @@
         data modify storage ui: alignR set value ["",{text:"\uF82B\uF82A",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
         data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}," ",{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{text:"\uF80C\uF809\uF806",font:"space"}]
     # HPが減ってたら赤くする
-    execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[-2].color set value "#b95c5c"
+    execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[4].color set value "#b95c5c"
     # HPがなんの位にあるかでずらす
         execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1].text set value "\uF80C\uF808\uF802"
         execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1].text set value "\uF80C\uF809"

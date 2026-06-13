@@ -21,20 +21,19 @@
         data modify storage ui: DEF.legs set from entity @s equipment.legs.components."minecraft:custom_data".Item.Field.DEF
         data modify storage ui: DEF.feet set from entity @s equipment.feet.components."minecraft:custom_data".Item.Field.DEF
 
+# Pre
     # DEF
-    execute if data storage ui: DEF run function rpg:core/tick/player/ui/def/_
+    function rpg:core/tick/player/ui/def/_
 
 # 表示用データセット
     # 右左
-        data modify storage ui: alignR set value ["",{text:"\uF82B\uF82A",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
-        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}," ",{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{text:"\uF80C\uF809\uF806",font:"space"}]
+        data modify storage ui: alignR set value ["",{text:"\uF82C\uF824",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
+        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}," ",{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{text:"\uF80C\uF809\uF808\uF804",font:"space"}]
     # HPが減ってたら赤くする
     execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[4].color set value "#b95c5c"
     # HPがなんの位にあるかでずらす
-        execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1].text set value "\uF80C\uF808\uF802"
-        execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1].text set value "\uF80C\uF809"
-    # DEFの頭が無かったらずらす
-    execute unless data storage ui: DEF.head run data modify storage ui: alignR[1].text set value "\uF82C"
+        execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1].text set value "\uF80C\uF809"
+        execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1].text set value "\uF80C\uF809\uF806"
     # オフハンドにアイテムがあったら
     execute if data entity @s equipment.offhand.components."minecraft:custom_data".Item run function rpg:core/tick/player/ui/offhand
 

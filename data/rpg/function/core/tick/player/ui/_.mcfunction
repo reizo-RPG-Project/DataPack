@@ -34,7 +34,7 @@
         execute if score @s RPG.HP matches 1..9 run data modify storage ui: alignL[-1].text set value "\uF80C\uF808\uF802"
         execute if score @s RPG.HP matches 10..99 run data modify storage ui: alignL[-1].text set value "\uF80C\uF809"
     # DEFの頭が無かったらずらす
-    execute unless data storage ui: DEF.head run data modify storage ui: alignR[1].text set value "\uF82B\uF829\uF827"
+    execute unless data storage ui: DEF.head run data modify storage ui: alignR[1].text set value "\uF82C"
     # オフハンドにアイテムがあったら
     execute if data entity @s equipment.offhand.components."minecraft:custom_data".Item run function rpg:core/tick/player/ui/offhand
 

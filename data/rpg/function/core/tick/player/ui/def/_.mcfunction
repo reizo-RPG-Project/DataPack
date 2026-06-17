@@ -4,6 +4,12 @@
 #
 # @within function rpg:core/tick/player/ui/_
 
+#> 最後尾
+    # head  => [][{name:"head"}]
+    # chest => [][{name:"chest"}]
+    # legs  => [][{name:"legs"}]
+    # feet  => [][{name:"feet"}]
+
 # 初期データ追加
     execute if data storage ui: DEF.head run data modify storage ui: DEF.data append value [{"text":"\uF80A",font:"space"},{"text":"0",font:"icon/armor/head/_"},{storage:"ui:",nbt:"DEF.head",font:"icon/armor/head/num",color:"white"},{name:"head"}]
     execute if data storage ui: DEF.chest run data modify storage ui: DEF.data append value [{"text":"\uF80A",font:"space"},{"text":"1",font:"icon/armor/chest/_"},{storage:"ui:",nbt:"DEF.chest",font:"icon/armor/chest/num",color:"white"},{"text":"\uF802",font:"space"},{name:"chest"}]

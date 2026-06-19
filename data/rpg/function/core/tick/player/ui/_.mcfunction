@@ -24,11 +24,13 @@
 # Pre
     # DEF
     function rpg:core/tick/player/ui/def/_
+    # Record
+    function rpg:core/tick/player/ui/record/_
 
 # 表示用データセット
     # 右左
         data modify storage ui: alignR set value ["",{text:"\uF82C\uF824",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
-        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}," ",{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{text:"\uF80C\uF809\uF808\uF804",font:"space"}]
+        data modify storage ui: alignL set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}," ",{"storage":"ui:",nbt:"HP_regen.data",interpret:true},"  ",{"storage":"ui:",nbt:"Record.data",interpret:true},{text:"\uF80C\uF809\uF808\uF804",font:"space"}]
     # HPが減ってたら赤くする
     execute if score $HP RPG.Temp matches ..5 run data modify storage ui: alignL[4].color set value "#b95c5c"
     # HPがなんの位にあるかでずらす
@@ -44,4 +46,5 @@ title @s actionbar ["",{"storage":"ui:",nbt:"alignL",interpret:true},{"text":"\u
     data remove storage ui: alignR
     data remove storage ui: alignL
     data remove storage ui: DEF
+    data remove storage ui: Record
     scoreboard players reset $HP RPG.Temp

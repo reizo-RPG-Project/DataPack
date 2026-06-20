@@ -8,6 +8,7 @@
 scoreboard players set #2 RPG.Const 2
 scoreboard players set #3 RPG.Const 3
 scoreboard players set #4 RPG.Const 4
+scoreboard players set #6 RPG.Const 6
 scoreboard players set #8 RPG.Const 8
 scoreboard players set #10 RPG.Const 10
 scoreboard players set #25 RPG.Const 25

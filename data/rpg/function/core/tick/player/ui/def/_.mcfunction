@@ -22,7 +22,7 @@
     execute store result score $UI.DEF.chest RPG.Temp run data get storage ui: DEF.chest
     execute if score $UI.DEF.chest RPG.Temp matches 1..9 run data modify storage ui: DEF.data[][{name:"chest"}] set value {text:"\uF828\uF821",font:"space"}
     execute store result score $UI.DEF.legs RPG.Temp run data get storage ui: DEF.legs
-    execute if score $UI.DEF.legs RPG.Temp matches 1..9 run data modify storage ui: DEF.data[][{name:"legs"}] set value {text:"\uF828\uF821",font:"space"}
+    execute if score $UI.DEF.legs RPG.Temp matches 1..9 run data modify storage ui: DEF.data[][{name:"legs"}] set value {text:"\uF828\uF822",font:"space"}
     execute store result score $UI.DEF.feet RPG.Temp run data get storage ui: DEF.feet
     execute if score $UI.DEF.feet RPG.Temp matches 10..99 run data modify storage ui: DEF.data[][{name:"feet"}] set value {text:"\uF808\uF801",font:"space"}
 

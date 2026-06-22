@@ -17,7 +17,11 @@ execute unless data storage ui: Record.PlayerData run return 0
 data modify storage ui: Record.data set from storage ui: Record.PlayerData.Text
 
 # デフォ
-data modify storage ui: Record.data append value {"text":"\uF80A\uF809\uF801",font:"space"}
+    data modify storage ui: Record.data insert 1 value {"text":"\uF82B\uF829\uF827",font:"space"}
+    data modify storage ui: Record.data append value {"text":"\uF80C\uF808\uF801",font:"space"}
+
+# DEFがあったら追加
+execute if data storage ui: DEF run data modify storage ui: Record.data append value {"text":"\uF829\uF828\uF822",font:"space"}
 
 #> メモ
 # 32 + 16 + 1

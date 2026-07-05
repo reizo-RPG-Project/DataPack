@@ -21,6 +21,12 @@
         data modify storage ui: DEF.legs set from entity @s equipment.legs.components."minecraft:custom_data".Item.Field.DEF
         data modify storage ui: DEF.feet set from entity @s equipment.feet.components."minecraft:custom_data".Item.Field.DEF
 
+# お願いOMD!
+function #oh_my_dat:please
+
+# データゲット
+data modify storage ui: PlayerData set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].UI
+
 # Pre
     # HP
     data modify storage ui: HP.data set value ["",{text:"\uE007",font:"icon/_","shadow_color":0},{score:{name:"@s",objective:"RPG.HP_MAX"}},{"text":"/"},{score:{name:"@s",objective:"RPG.HP"},color:"gray"}]
@@ -28,10 +34,12 @@
     function rpg:core/tick/player/ui/def/_
     # Record
     function rpg:core/tick/player/ui/record/_
+    # Effect
+    function rpg:core/tick/player/ui/effect/_
 
 # 表示用データセット
     # 右左
-        data modify storage ui: alignR set value ["",{text:"\uF82C\uF824",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
+        data modify storage ui: alignR set value ["",{"storage":"ui:",nbt:"Effect.data",interpret:true},{text:"\uF82C\uF824",font:"space"},{"storage":"ui:",nbt:"DEF.data",interpret:true}]
         data modify storage ui: alignL set value ["",{"storage":"ui:",nbt:"HP.data",interpret:true},{text:"\uF824",font:"space"},{"storage":"ui:",nbt:"HP_regen.data",interpret:true},{"storage":"ui:",nbt:"Record.data",interpret:true},{text:"\uF80C\uF809\uF808\uF804",font:"space"}]
     # HPが減ってたら赤くする
     execute if score $HP RPG.Temp matches ..5 run data modify storage ui: HP.data[-1].color set value "#b95c5c"
@@ -51,4 +59,5 @@ title @s actionbar ["",{"storage":"ui:",nbt:"alignL",interpret:true},{"text":"\u
     data remove storage ui: HP_regen
     data remove storage ui: DEF
     data remove storage ui: Record
+    data remove storage ui: Effect
     scoreboard players reset $HP RPG.Temp

@@ -5,10 +5,10 @@
 # @within function rpg:core/tick/player/ui/effect/_
 
 # リストの数を確認
-execute store result score $UI.Effect.Len RPG.Temp run data get storage ui: Effect.data[]
+execute store result score $UI.Effect.Len RPG.Temp run data get storage ui: Effect.data
 
-# 一定数だったら動作を止める(仮)
-# execute if score $UI.Effect.Len RPG.Temp matches 0.. run return 0
+# 上限だったら動作を止める。
+execute if score $UI.Effect.Len RPG.Temp matches 8 run return 0
 
 #> Duration関係
     # Duration取得
@@ -35,7 +35,8 @@ data modify storage ui: Effect.data prepend from storage ui: PlayerData.Effect[-
 data modify storage ui: Effect.Space append value [{"text":"\uF808\uF804"}]
 
 # お掃除
-data remove storage ui: PlayerData.Effect[-1]
+    data remove storage ui: PlayerData.Effect[-1]
+    scoreboard players reset $UI.Effect.Len
 
 # 再帰
 execute if data storage ui: PlayerData.Effect[-1] run function rpg:core/tick/player/ui/effect/foreach

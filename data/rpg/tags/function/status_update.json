@@ -1,0 +1,7 @@
+{
+    "values": [
+        "rpg:core/tick/player/status/hp/_",
+        "rpg:core/tick/player/status/mp/_",
+        "rpg:core/tick/player/ui/def/_"
+    ]
+}

@@ -30,4 +30,5 @@ execute if items entity @s container.* #rpg:unique/all run function rpg:core/tic
 # UI
 function rpg:core/tick/player/ui/_
 
-function rpg:core/tick/player/status/update
+# ステータスの更新
+execute if entity @s[tag=RPG.StatusUpdate] run function rpg:core/tick/player/status/update

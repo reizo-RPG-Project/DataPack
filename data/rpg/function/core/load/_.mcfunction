@@ -49,6 +49,7 @@
     scoreboard objectives add RPG.Buff.INT dummy
     # その他
     scoreboard objectives add RPG.DMG dummy
+    scoreboard objectives add RPG.FireDMG dummy
 
 # 定数
 function rpg:core/load/const

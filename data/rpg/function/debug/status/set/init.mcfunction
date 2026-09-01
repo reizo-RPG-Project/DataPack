@@ -9,6 +9,7 @@
     scoreboard players set @s RPG.STR 10
     scoreboard players set @s RPG.INT 10
     scoreboard players set @s RPG.DEF 50
+    scoreboard players set @s RPG.SPD 50
 
 # Origin
 function rpg:debug/status/set/origin_init

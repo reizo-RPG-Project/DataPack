@@ -33,6 +33,8 @@
     scoreboard objectives add RPG.DEF dummy
     scoreboard objectives add RPG.OriginDEF dummy
     scoreboard objectives add RPG.DEF_Old dummy
+    scoreboard objectives add RPG.SPD dummy
+    scoreboard objectives add RPG.OriginSPD dummy
     scoreboard objectives add RPG.Bonus.HP_MAX dummy
     scoreboard objectives add RPG.Bonus.HP_regen dummy
     scoreboard objectives add RPG.Bonus.MP_MAX dummy
@@ -40,6 +42,7 @@
     scoreboard objectives add RPG.Bonus.DEF dummy
     scoreboard objectives add RPG.Bonus.STR dummy
     scoreboard objectives add RPG.Bonus.INT dummy
+    scoreboard objectives add RPG.Bonus.SPD dummy
     scoreboard objectives add RPG.Buff.HP_MAX dummy
     scoreboard objectives add RPG.Buff.HP_regen dummy
     scoreboard objectives add RPG.Buff.MP_MAX dummy
@@ -47,6 +50,7 @@
     scoreboard objectives add RPG.Buff.DEF dummy
     scoreboard objectives add RPG.Buff.STR dummy
     scoreboard objectives add RPG.Buff.INT dummy
+    scoreboard objectives add RPG.Buff.SPD dummy
     # その他
     scoreboard objectives add RPG.DMG dummy
     scoreboard objectives add RPG.FireDMG dummy
